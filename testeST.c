@@ -25,7 +25,7 @@ int pontosTuristicos2;
   
   // Área para entrada de dados
 
-  printf("\n-----Cadastro da Carta 1-----\n");
+  printf("\n----Cadastro da Carta 1----\n");
 
   printf("Digite o Estado (A-H):");
   scanf(" %c", &estado1);
@@ -49,7 +49,7 @@ int pontosTuristicos2;
   scanf("%d", &pontosTuristicos1);
 
 
-  printf("\n-----Cadastro da Carta 2-----\n");
+  printf("\n----Cadastro da Carta 2----\n");
 
    printf("Digite o Estado (A-H):");
   scanf(" %c", &estado2);
