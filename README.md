@@ -1,6 +1,6 @@
 # Projetos da Karen
 
-Este repositório reúne alguns dos projetos que desenvolvi durante meus estudos em programação.
+Este repositório reúne alguns dos projetos que estou desenvolvendo durante meus estudos em programação.
 
 ## Sobre este repositório
 
