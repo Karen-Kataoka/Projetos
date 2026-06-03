@@ -139,7 +139,7 @@ int main(){
      
     // Área para exibição dos dados da cidade
 
-     // ============================================================
+     // ==========================================================
          // BLOCO DE SAÍDA DE DADOS
          // Exibe no terminal as informações cadastradas para cada carta.
          // Formatações utilizadas:
@@ -147,7 +147,7 @@ int main(){
        //   %s  → imprime string
        //   %d  → imprime inteiro
        //   %.2f → imprime float com 2 casas decimais
-     // ============================================================
+     // ==========================================================
 
      /*=====Saida de Dados da Carta 1=====*/
 
