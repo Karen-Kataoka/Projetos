@@ -19,23 +19,28 @@ int main(){
       // ==============================================================================
 
      /*-----Carta 1 -----*/
-    char estado1;                 //Letra de A a H representando o estado
-    char codigo1[4];             // Código da carta, ex: "A01" (3 caracteres + terminador nulo)
-    char nomeCidade1[50];         //Nome da cidade, até 49 caracteres + terminador nulo
-    int populacao1;               //População total da cidade (número inteiro)
-    float area1;                  //Área territorial em km²
-    float pib1;                   //PIB em Bilhões de reais
-    int pontosTuristicos1;        //Quantidade de pontos turísticos da cidade
+    char estado1;                                                //Letra de A a H representando o estado
+    char codigo1[4];                                             //Código da carta, ex: "A01" (3 caracteres + terminador nulo)
+    char nomeCidade1[50];                                        //Nome da cidade, até 49 caracteres + terminador nulo
+    int populacao1;                                              //População total da cidade (número inteiro)
+    float area1;                                                 //Área territorial em km²
+    float pib1;                                                  //PIB em Bilhões de reais
+    int pontosTuristicos1;                                       //Quantidade de pontos turísticos da cidade
+    float densidadePopulacional1;                                //Quantas pessoas vivem, em média, em cada quilômetro quadrado daquele país/região.
+    float pibPerCapita1;                                         //É uma média de quanto “valor econômico” cada pessoa produziria se a riqueza fosse dividida igualmente.
 
     /*-----Carta 2 -----*/
-    char estado2;             //Letra de A a H representando o estado
-    char codigo2[4];         // Código da carta, ex: "B02" (3 caracteres + terminador nulo)
-    char nomeCidade2[50];     //Nome da cidade, até 49 caracteres + terminador nulo
-    int populacao2;           //População total da cidade (número inteiro)
-    float area2;              //Área territorial em km²
-    float pib2;               //PIB em Bilhões de reais
-    int pontosTuristicos2;    //Quantidade de pontos turísticos da cidade
+    char estado2;                                                 //Letra de A a H representando o estado
+    char codigo2[4];                                             // Código da carta, ex: "B02" (3 caracteres + terminador nulo)
+    char nomeCidade2[50];                                         //Nome da cidade, até 49 caracteres + terminador nulo
+    int populacao2;                                               //População total da cidade (número inteiro)
+    float area2;                                                  //Área territorial em km²
+    float pib2;                                                   //PIB em Bilhões de reais
+    int pontosTuristicos2;                                        //Quantidade de pontos turísticos da cidade
+    float densidadePopulacional2;                                 //Quantas pessoas vivem, em média, em cada quilômetro quadrado daquele país/região.
+    float pibPerCapita2;                                          //É uma média de quanto “valor econômico” cada pessoa produziria se a riqueza fosse dividida igualmente.
 
+      
        // ============================================================
                   // BLOCO DE ENTRADA DE DADOS — CARTA 1
 
@@ -75,6 +80,17 @@ int main(){
     printf("Numero de pontos turisticos:");
     scanf("%d", &pontosTuristicos1);
 
+  
+    // Cálculo da densidade populacional
+    // população dividida pela área
+    densidadePopulacional1 = (float)populacao1 / area1;
+
+    // Cálculo do PIB per capita
+    // PIB (convertido para reais) dividido pela população
+    // como o PIB está em bilhões, multiplica por 1.000.000.000
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+
+    
     // ============================================================
        // BLOCO DE ENTRADA DE DADOS — CARTA 2
         // Idêntico ao bloco da Carta 1.
@@ -108,6 +124,18 @@ int main(){
     printf("Numero de pontos turisticos:");
     scanf("%d", &pontosTuristicos2);
 
+
+    // Cálculo da densidade populacional
+    // população dividida pela área
+    densidadePopulacional2 = (float)populacao2 / area2;
+
+    // Cálculo do PIB per capita
+    // PIB (convertido para reais) dividido pela população
+    // como o PIB está em bilhões, multiplica por 1.000.000.000
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2;
+
+   
+
      
     // Área para exibição dos dados da cidade
 
@@ -131,6 +159,10 @@ int main(){
     printf("Area: %.2f km2\n", area1);
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Pontos turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
+    
+
 
    
      /*=====Saida de Dados da Carta 2=====*/
@@ -143,6 +175,8 @@ int main(){
     printf("Area: %.2f km2\n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Pontos turisticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     // ============================================================
     //Retorno 0 indica que o programa encerrou sem erros.
